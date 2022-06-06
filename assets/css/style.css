@@ -38,6 +38,8 @@ header {
 header img {
   margin-bottom: 3.2rem;
   max-width: 100%;
+
+  animation: rotate 700ms;
 }
 
 header h1 {
@@ -76,6 +78,14 @@ header p {
 
 .card img {
   width: 100%;
+  border-radius: 3rem;
+  transition: transform 200ms ease-in;
+
+  animation: downtop 700ms;
+}
+
+.card img:hover {
+  transform: scale(1.05);
 }
 
 .card span {
@@ -98,9 +108,39 @@ header p {
   position: absolute;
   top: 1.6rem;
   right: 1.6rem;
+
+  animation: topdown 700ms;
 }
 
+@keyframes downtop {
+  0% {
+    transform: translateY(40px);
+  }
 
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(360deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
 
 
 
